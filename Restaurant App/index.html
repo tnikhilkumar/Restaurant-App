@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Restaurant App</title>
+  </head>
+  <body>
+    <main>
+      <section id="tableSection">
+        <h1>Tables</h1>
+        <input
+          type="search"
+          name="searchTable"
+          id="searchTable"
+          placeholder="Search table"
+        />
+        <section id="tables"></section>
+      </section>
+      <section id="menuSection">
+        <h1 class="menubar">Menu</h1>
+        <input
+          type="search"
+          name="searchMenu"
+          id="searchMenu"
+          placeholder="Search menu .. by course, by food "
+        />
+        <section id="menu"></section>
+      </section>
+    </main>
+    <section class="modal hidden">
+      <div class="table-name">
+        <div></div>
+        <button class="btn-close">X</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Number of servings</th>
+          </tr>
+        </thead>
+        <tbody class="bill"></tbody>
+      </table>
+      <div>
+        <span id="total">Total : 0</span>
+        <button id="close-session">Close Session</button>
+      </div>
+    </section>
+    <div class="overlay hidden"></div>
+    <script src="./js/items.js" defer></script>
+    <script src="./js/filterItems.js" defer></script>
+    <script src="./js/draggable.js" defer></script>
+    <script src="./js/popUp.js" defer></script>
+  </body>
+</html>
